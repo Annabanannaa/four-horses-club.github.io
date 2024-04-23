@@ -51,17 +51,15 @@
     color: var(--color-blue)
 }
 
-.btn__small {
-    border-radius: 62px;
-    padding: 12px;
-    width: 113px;
-    height: 35px;
-}
-
 .btn__outline-dark:hover {
     border: 2px solid var(--color-dark);
     background: var(--color-dark);
     color: var(--primary-p-2);
+}
+
+.btn__outline-blue:hover {
+    background: var(--color-blue);
+    color: white;
 }
 
 .btn-slider {
@@ -74,6 +72,17 @@
     border-radius: 100%;
 
     background: var(--main-text-color);
+
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.btn__small {
+    border-radius: 62px;
+    padding: 12px;
+    width: 113px;
+    height: 35px;
 }
 
 .btn-slider::after {
@@ -83,6 +92,10 @@
 
 .btn-slider:hover {
     background: var(--color-yellow);
+
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
 .btn-slider:disabled {
