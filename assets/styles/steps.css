@@ -1,0 +1,221 @@
+.steps {
+    position: relative;
+    overflow: hidden;
+
+    margin: 184px 0 200px;
+}
+
+.steps .swiper {
+    overflow: visible;
+}
+
+.steps__title-wrapper {
+    max-width: 806px;
+    margin-bottom: 54px;
+}
+
+.steps__title {
+    display: inline;
+    margin-right: 20px;
+
+    font-family: var(--font-merriweather);
+    font-size: 54px;
+    line-height: 1.2;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+}
+
+.steps__subtitle {
+    display: inline-block;
+    max-width: 280px;
+    margin-left: -12px;
+
+    font-family: var(--font-golos);
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-blue);
+}
+
+.steps__number {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main-text-color);
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.steps__text {
+    height: max-content;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main-text-color);
+}
+
+.steps__img::before {
+    content: url("../../images/plane.png");
+
+    position: absolute;
+    left: 470px;
+    bottom: -5px;
+    z-index: 1;
+}
+
+.steps .steps__pagination {
+    position: static;
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.steps .steps__pagination .swiper-pagination-bullet {
+    margin: auto 3px auto 3px;
+    height: 10px;
+    width: 10px;
+
+    vertical-align: bottom;
+}
+
+.steps__btns {
+    display: none;
+    margin-top: 28px;
+    height: 36px;
+    justify-content: center;
+}
+
+.steps .swiper-pagination-bullet-active {
+    background: var(--main-text-color);
+}
+
+/* Десктопная плитка */
+@media (min-width: 1025px) {
+    .steps__wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .steps__span-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .steps__rows-2 {
+        grid-row: span 2 / span 2;
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps__cols-2 {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps__item {
+        position: relative;
+        display: flex;
+        padding: 20px 20px 20px;
+        gap: 16px;
+
+        background-image: url("../../images/steps-bg.jpg");
+    }
+
+    .steps__item.swiper-slide {
+        width: auto;
+        height: auto;
+    }
+    .steps__text {
+        max-width: 446px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .steps {
+        margin: 120px 0;
+    }
+
+    .steps__title {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .steps__subtitle {
+        margin-top: 12px;
+        max-width: 100%;
+        margin-left: 0;
+
+        font-size: 18px;
+    }
+
+    .steps__title-wrapper {
+        margin-bottom: 148px;
+    }
+
+    .steps__mobile-item {
+        display: flex;
+        flex-flow: column;
+        gap: 28px;
+        padding: 62px 24px 34px 20px;
+        height: auto;
+
+        background: url("../../images/steps-bg.jpg");
+        background-size: cover;
+
+        box-sizing: border-box;
+    }
+
+    .steps__item {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .steps-swiper::before {
+        content: '';
+
+        position: absolute;
+
+        left: 50%;
+        top: -131px;
+        z-index: 2;
+        transform: translateX(-50%);
+
+        width: 341px;
+        height: 182px;
+        background-image: url("../../images/plane.png");
+        background-size: cover;
+    }
+
+    .steps__img::before {
+        display: none;
+    }
+
+    .steps__text {
+        font-size: 18px;
+    }
+
+    .steps__btns {
+        margin-bottom: 10px;
+        display: flex;
+    }
+}
+
+@media (max-width: 520px) {
+    .steps__btns {
+        margin-bottom: 0;
+    }
+
+    .steps-swiper::before {
+        left: 6px;
+        transform: translateX(0%);
+    }
+}

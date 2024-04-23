@@ -1,0 +1,42 @@
+.lecture {
+    margin-top: 80px;
+    margin-bottom: 59px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lecture__mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .lecture {
+        margin-top: 48px;
+        margin-bottom: 34px;
+        flex-direction: column;
+    }
+
+    .lecture__hidden {
+        display: none;
+    }
+
+    .lecture__mobile {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .lecture img {
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .lecture img {
+        margin-top: 30px;
+        width: 100%;
+    }
+}

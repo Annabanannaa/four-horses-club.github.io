@@ -1,0 +1,37 @@
+h1 {
+    font-family: var(--font-merriweather);
+}
+
+.title-h1 {
+    font-family: var(--font-merriweather);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #313131;
+}
+
+.title-h3 {
+    font-family: var(--font-merriweather);
+    font-size: 54px;
+    line-height: 1.2;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+}
+
+.title-h1 span {
+    display: block;
+
+    line-height: 1.05;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .title-h1 {
+        font-size: 36px;
+    }
+    .title-h3 {
+        font-size: 36px;
+    }
+}
+
